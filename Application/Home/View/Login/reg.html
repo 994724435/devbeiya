@@ -17,7 +17,7 @@
 <body>
   <!--header 开始-->
   <header class="mui-bar mui-bar-nav">
-    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back" href="#" onClick="javascript :history.back(-1);"></a>
     <h1 class="mui-title">注册</h1>
   </header>
   <!--header 结束-->
@@ -25,9 +25,13 @@
     <div class="page">
       <div class="main">
           <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+            <h4>个人信息</h4>
            <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="name" placeholder="姓名" value="">
+            <input class="txt-input txt-username" type="text" name="name" placeholder="中文姓名" value="">
           </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="enname" placeholder="英文姓名" value="">
+              </div>
             <div class="item item-username">
             <input class="txt-input txt-username" type="number" name="tel" placeholder="手机"  id="tel">
           </div>
@@ -42,39 +46,64 @@
            <div class="item item-username">
             <input class="txt-input txt-username" type="text" name="email" placeholder="邮箱"  id="tel">
           </div>
+
+           <h4>去程信息</h4>
+            <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="qnumber" placeholder="去程航班号"  id="tel">
+            </div>
+
           <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="splace" placeholder="始发地"  id="tel">
+            <input class="txt-input txt-username" type="text" name="qsplace" placeholder="始发地"  id="tel">
           </div>
           <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="eplace" placeholder="目的地"  id="tel">
+            <input class="txt-input txt-username" type="text" name="qeplace" placeholder="目的地"  id="tel">
           </div>
 
           <div class="item item-username">
-            <select class="form-control input-lg" name="hangban">
-                        <option value="">---航班信息---</option>
-                            <option value="飞机">飞机</option>
-                            <option value="其他">其他</option>
+            <select class="form-control input-lg" name="qzhong">
+                        <option value="">---是否中转---</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
                         </select>
           </div>
-
-           
-
-           <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="number" placeholder="航班编号"  id="tel">
-          </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="qzhongplace" placeholder="中转地点"  id="tel">
+              </div>
 
           <div class="item item-username">
-            <input class="txt-input txt-username" type="date" name="begindt" placeholder="出发日期"  id="tel">
+            <input class="txt-input txt-username" type="date" name="qdt" placeholder="出发日期"  id="tel">
           </div>
 
            <div class="item item-username">
-            <input class="txt-input txt-username" type="date" name="enddt" placeholder="到达日期"  id="tel">
+            <input class="txt-input txt-username" type="date" name="qedt" placeholder="到达日期"  id="tel">
           </div>
 
+              <h4>返程信息</h4>
            <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="campany" placeholder="公司全称"  id="tel">
+            <input class="txt-input txt-username" type="text" name="fnumber" placeholder="返程班号"  id="tel">
           </div>
+           <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="fsplace" placeholder="始发地"  id="tel">
+            </div>
+            <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="feplace" placeholder="目的地"  id="tel">
+            </div>
+            <div class="item item-username">
+                  <select class="form-control input-lg" name="fzhong">
+                      <option value="">---是否中转---</option>
+                      <option value="是">是</option>
+                      <option value="否">否</option>
+                  </select>
+            </div>
 
+              <h4 >T恤尺码</h4>
+              <div class="item item-username">
+                  <select class="form-control input-lg" name="short">
+                      <option value="M">M-肩宽50 衣长69 胸围100， 参考身高170-175，适合体重65-75kg</option>
+                      <option value="S">S-肩宽47 衣长63 胸围88，参考身高164-169cm，适合55-65kg</option>
+                      <option value="XS">XS-肩宽44 衣长63 胸围88，参考身高153-163cm，适合55公斤以下</option>
+                  </select>
+              </div>
        <!--    <div class="item item-captcha">
             <div class="input-info">
               <input id="validateCode" class="txt-input txt-captcha" type="text" placeholder="手机验证码">

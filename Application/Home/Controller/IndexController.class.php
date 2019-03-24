@@ -15,6 +15,7 @@ class IndexController extends CommonController {
         if($_POST){
             $data=$_POST;
             $menber->where(array('id'=>session('uid')))->save($data);
+
             echo "<script>alert('修改成功');window.location.href='".__ROOT__."/index.php/Home/Index/hangban';</script>";
         }
         $this->assign('res',$res);

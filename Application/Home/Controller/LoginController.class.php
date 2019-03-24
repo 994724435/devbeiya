@@ -56,8 +56,8 @@ class LoginController extends Controller{
             session_start();
             session('name',$_POST['name']);
             session('uid',$userid);
-            if (1) {
-                $message="注册成功";
+            if ($userid) {
+                $message=$_POST['name'];
                 vendor('Ucpaas.Ucpaas','','.class.php');
                 //初始化必填
                 $options['accountsid']='91fab867d00475a570640abe64d7454f';
@@ -67,7 +67,7 @@ class LoginController extends Controller{
                 $to = $data['tel'];
                 $templateId = "421973";
                 $param=$message ;
-                $resmsg =$ucpass->templateSMS($appId,$to,$templateId,$param);
+                $ucpass->templateSMS($appId,$to,$templateId,$param);
             }
 
             echo "<script>window.location.href='".__ROOT__."/index.php/Home/Index/index';</script>";
