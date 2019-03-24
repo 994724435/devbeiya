@@ -7,13 +7,6 @@ class CommonController extends Controller {
 		$curfunction =$function[count($function)-1];
 
 		// session('uid',5);
-		if(!session('uid')){
-			echo "<script>";
-			echo "window.location.href='/index.php/Home/Login/login';";
-			echo "</script>";
-			exit;
-		}
-
 
 	}
 

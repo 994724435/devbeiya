@@ -8,21 +8,27 @@
 	<title>登录</title>
 	<link rel="stylesheet" href="__ROOT__/Public/Home/easycss/style.css">
 	<style type="text/css">
-		.h2{font-size: 30px;margin-top: 90px;}
+		.h2{font-size: 25px;margin-top: 90px;}
 	</style>
 	<!-- <script type="text/javascript" src="js/aui.js"></script> -->
 </head>
 <body class="login_bg">
 	<!-- <img src="img/logo.png" alt="" class="logoImg"> -->
-	<h1 class="logoImg h2" style="width: 85%;">GORE北亚区销售会议</h1>
+	<h1 class="logoImg h2" style="width: 98%;">Gore2019NAP Sales Meeting</h1>
 	<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 		<input type="text" name="tel" placeholder="手机号" class="userName">
 		<input type="password" name="pwd" placeholder="密码" class="pwd">
 		<input type="submit" name="" class="login" value="登录">
+		<input type="button" name="" id="reg" class="login" onclick="javascript:window.location='/index.php/Home/Login/reg.html'" value="注册" style="margin-top: 15px;">
+		<a href="reg.html" class="fr"></a>
+
 	</form>
 	<div class="login_tip">
 		<!--<a href="forgetPwd.html" class="fl">忘记密码?</a>-->
-		<a href="reg.html" class="fr">注册</a></div>
-
+		<!--<a href="reg.html" class="fr">注册</a>-->
+	</div>
+	<script>
+		document.getElementById("reg")
+	</script>
 </body>
 </html>

@@ -5,27 +5,50 @@
 <title>注册</title>
 <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" name="viewport" />
 <style type="text/css" rc="js/aui.js"></style>
-<script type="text/javascript" src="__ROOT__/Public/Home/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Home/js/jquery.min.js"></script>
 <script type="text/javascript" src="__ROOT__/Public/Home/js/layer/layer.js"></script>
 <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Home/easycss/aui.min.css">
 <script type="text/javascript" src="__ROOT__/Public/Home/js/aui.js"></script>
 <link rel="stylesheet" href="__ROOT__/Public/Home/easycss/style.css">
 <style type="text/css">
   .goLogin{float: right;color: #333;}
+  .rado{ display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      border-radius: 100%;
+      vertical-align: middle;
+      border: 1px solid #E4E4E4;
+      background: #FFFFFF;
+    }
+  .cons{font-size: 16px;}
+  input[type="date"]:before {
+        content: attr(placeholder);
+         color:#666666;
+     }
+   h4{color: red}
 </style>
 </head>
 <body>
   <!--header 开始-->
-  <header class="mui-bar mui-bar-nav">
-    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back" href="#" onClick="javascript :history.back(-1);"></a>
-    <h1 class="mui-title">注册</h1>
+  <header class="mui-bar mui-bar-nav" style="background-color: red">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back" href="/index.php/Home/Login/login"></a>
+    <h1 class="mui-title" style="color: white;font-weight: bold;font-size: 26px;">信息填写</h1>
   </header>
   <!--header 结束-->
   <div class="mui-content">
     <div class="page">
       <div class="main">
           <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-            <h4>个人信息</h4>
+            <h4>设置登录密码</h4>
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="password" name="password" placeholder="密码" value="">
+              </div>
+
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="password" name="password1" placeholder="确认密码" value="">
+              </div>
+              <h4>个人信息</h4>
            <div class="item item-username">
             <input class="txt-input txt-username" type="text" name="name" placeholder="中文姓名" value="">
           </div>
@@ -35,13 +58,7 @@
             <div class="item item-username">
             <input class="txt-input txt-username" type="number" name="tel" placeholder="手机"  id="tel">
           </div>
-          <div class="item item-username">
-            <input class="txt-input txt-username" type="password" name="password" placeholder="密码" value="">
-          </div>
 
-           <div class="item item-username">
-            <input class="txt-input txt-username" type="password" name="password1" placeholder="确认密码" value="">
-          </div>
 
            <div class="item item-username">
             <input class="txt-input txt-username" type="text" name="email" placeholder="邮箱"  id="tel">
@@ -58,25 +75,29 @@
           <div class="item item-username">
             <input class="txt-input txt-username" type="text" name="qeplace" placeholder="目的地"  id="tel">
           </div>
-
-          <div class="item item-username">
-            <select class="form-control input-lg" name="qzhong">
-                        <option value="">---是否中转---</option>
-                            <option value="是">是</option>
-                            <option value="否">否</option>
-                        </select>
-          </div>
               <div class="item item-username">
-                  <input class="txt-input txt-username" type="text" name="qzhongplace" placeholder="中转地点"  id="tel">
+                  <input class="txt-input txt-username" type="date" name="qdt" value="出发日期" placeholder="出发日期"  id="tel">
               </div>
 
-          <div class="item item-username">
-            <input class="txt-input txt-username" type="date" name="qdt" placeholder="出发日期"  id="tel">
-          </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="date" name="qedt" placeholder="到达日期"  id="tel">
+              </div>
+          <!--<div class="item item-username">-->
+            <!--<select class="form-control input-lg" name="qzhong">-->
+                        <!--<option value="">-&#45;&#45;是否中转-&#45;&#45;</option>-->
+                            <!--<option value="是">是</option>-->
+                            <!--<option value="否">否</option>-->
+                        <!--</select>-->
+          <!--</div>-->
+              <div class="item item-username">
+                  <p class="cons">是否中转:&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado showbtn" name="qzhong" value="是" />是
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado hidebtn" name="qzhong" value="否" /> 否 </p>
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn"  type="text" name="qzhongplace" placeholder="中转地点"  id="tel">
+              </div>
 
-           <div class="item item-username">
-            <input class="txt-input txt-username" type="date" name="qedt" placeholder="到达日期"  id="tel">
-          </div>
+
 
               <h4>返程信息</h4>
            <div class="item item-username">
@@ -88,22 +109,43 @@
             <div class="item item-username">
                   <input class="txt-input txt-username" type="text" name="feplace" placeholder="目的地"  id="tel">
             </div>
-            <div class="item item-username">
-                  <select class="form-control input-lg" name="fzhong">
-                      <option value="">---是否中转---</option>
-                      <option value="是">是</option>
-                      <option value="否">否</option>
-                  </select>
-            </div>
-
-              <h4 >T恤尺码</h4>
               <div class="item item-username">
-                  <select class="form-control input-lg" name="short">
-                      <option value="M">M-肩宽50 衣长69 胸围100， 参考身高170-175，适合体重65-75kg</option>
-                      <option value="S">S-肩宽47 衣长63 胸围88，参考身高164-169cm，适合55-65kg</option>
-                      <option value="XS">XS-肩宽44 衣长63 胸围88，参考身高153-163cm，适合55公斤以下</option>
-                  </select>
+                  <input class="txt-input txt-username" type="date" name="fdt" value="出发日期" placeholder="出发日期"  id="tel">
               </div>
+
+              <div class="item item-username">
+                  <input class="txt-input txt-username" type="date" name="fedt" placeholder="到达日期"  id="tel">
+              </div>
+            <!--<div class="item item-username">-->
+                  <!--<select class="form-control input-lg" name="fzhong">-->
+                      <!--<option value="">-&#45;&#45;是否中转-&#45;&#45;</option>-->
+                      <!--<option value="是">是</option>-->
+                      <!--<option value="否">否</option>-->
+                  <!--</select>-->
+            <!--</div>-->
+              <div class="item item-username">
+                  <p class="cons">是否中转:&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado showbtn1" name="fzhong" value="是"/>是
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado hidebtn1" name="fzhong" value="否" /> 否 </p>
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn1"  type="text" name="qzhongplace" placeholder="中转地点"  id="tel">
+              </div>
+
+              <HR align=center width=300 color=#987cb9 SIZE=1>
+              <h4 style="margin-top: 10px;">T恤尺码信息</h4>
+              <div class="item item-username">
+                  <p class="cons">&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="M" class="rado" name="short" />M(肩宽50 衣长69 胸围100， 参考身高170-175，适合体重65-75kg)</p>
+                  <p class="cons">&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="S" class="rado" name="short" /> S(肩宽47 衣长63 胸围88，参考身高164-169cm，适合55-65kg) </p>
+                  <p class="cons">&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" value="XS" class="rado" name="short" /> XS(肩宽47 衣长63 胸围88，参考身高164-169cm，适合55-65kg) </p>
+              </div>
+
+              <!--<div class="item item-username">-->
+                  <!--<select class="form-control input-lg" name="short">-->
+                      <!--<option value="M">M-肩宽50 衣长69 胸围100， 参考身高170-175，适合体重65-75kg</option>-->
+                      <!--<option value="S">S-肩宽47 衣长63 胸围88，参考身高164-169cm，适合55-65kg</option>-->
+                      <!--<option value="XS">XS-肩宽44 衣长63 胸围88，参考身高153-163cm，适合55公斤以下</option>-->
+                  <!--</select>-->
+              <!--</div>-->
        <!--    <div class="item item-captcha">
             <div class="input-info">
               <input id="validateCode" class="txt-input txt-captcha" type="text" placeholder="手机验证码">
@@ -113,7 +155,7 @@
           <div class="ui-btn-wrap">
 
            <!-- <button class="ui-btn-lg ui-btn-primary" type="submit">确认注册</button>  -->
-           <input type="submit" class="ui-btn-lg ui-btn-primary" value="确认注册" style="background: #007aff;" >
+           <input type="submit" class="ui-btn-lg ui-btn-primary" value="确认注册" style="background: red" >
            </div>
           <span class="goLogin">已有账号?<a href="login.html">立即登录</a></span>
         </form>
@@ -121,7 +163,30 @@
    
     </div>
   </div>
+<script>
+    $(document).ready(function(){
+        $(".zhongbtn").hide();
 
+        $(".hidebtn").click(function(){
+            $(".zhongbtn").hide();
+        });
+
+        $(".showbtn").click(function(){
+            $(".zhongbtn").show();
+        });
+
+        $(".zhongbtn1").hide();
+
+        $(".hidebtn1").click(function(){
+            $(".zhongbtn1").hide();
+        });
+
+        $(".showbtn1").click(function(){
+            $(".zhongbtn1").show();
+        });
+
+    });
+</script>
 
 </body>
 </html>

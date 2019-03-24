@@ -10,6 +10,13 @@ class IndexController extends CommonController {
 	}
 
     public function hangban(){
+        if(!session('uid')){
+            echo "<script>";
+            echo "window.location.href='/index.php/Home/Login/login';";
+            echo "</script>";
+            exit;
+        }
+
         $menber =M('p_users');
         $res = $menber->where(array('id'=>session('uid')))->find();
         if($_POST){
