@@ -156,7 +156,18 @@
                         <input class="form-control input-lg" type="text" value="{$res.feplace}"  name="feplace">
                     </div>
                 </div>
-
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">出发日期</span>
+                        <input class="form-control input-lg" type="date" name="fdt" value="{$res.fdt}">
+                    </div>
+                </div>
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">到达日期</span>
+                        <input class="form-control input-lg" type="date" name="fedt" value="{$res.fedt}">
+                    </div>
+                </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon">是否中转</span>
@@ -166,6 +177,12 @@
                             <option value="否">否</option>
                         </select>
                         </select>
+                    </div>
+                </div>
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">中转地点</span>
+                        <input class="form-control input-lg" type="text" value="{$res.fzhongplace}"  name="fzhongplace">
                     </div>
                 </div>
 

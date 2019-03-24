@@ -65,12 +65,12 @@ class LoginController extends Controller{
                 $ucpass = new \Ucpaas($options);
                 $appId = "cd9233a18f5f421c8a19381c9e8833e7";
                 $to = $data['tel'];
-                $templateId = "421973";
+                $templateId = "446966";
                 $param=$message ;
                 $ucpass->templateSMS($appId,$to,$templateId,$param);
             }
 
-            echo "<script>window.location.href='".__ROOT__."/index.php/Home/Index/index';</script>";
+            echo "<script>alert('注册成功');window.location.href='".__ROOT__."/index.php/Home/Index/index';</script>";
             exit();
         }
 
