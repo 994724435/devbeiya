@@ -44,19 +44,19 @@
                 <div class="form-group col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon">中文姓名</span>
-                        <input class="form-control input-lg" type="text" disabled value="{$res.name}">
+                        <input class="form-control input-lg" type="text" name="name" disabled value="{$res.name}">
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon">英文姓名</span>
-                        <input class="form-control input-lg" type="text" disabled value="{$res.enname}">
+                        <input class="form-control input-lg" type="text"  disabled value="{$res.enname}">
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</span>
-                        <input class="form-control input-lg" type="text" disabled value="{$res.tel}">
+                        <input class="form-control input-lg" type="text" name="tel" disabled value="{$res.tel}">
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
@@ -92,14 +92,28 @@
                 <div class="form-group col-lg-3">
 
                     <div class="input-group">
-                        <span class="input-group-addon">始发地&nbsp;&nbsp;&nbsp;</span>
+                        <span class="input-group-addon">出发城市</span>
                         <input class="form-control input-lg" type="text" name="qsplace" value="{$res.qsplace}" >
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">目的地&nbsp;&nbsp;&nbsp;</span>
+                        <span class="input-group-addon">抵达城市</span>
                         <input class="form-control input-lg" type="text" value="{$res.qeplace}"  name="qeplace">
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">出发日期</span>
+                        <input class="form-control input-lg" type="date" name="qdt" value="{$res.qdt}">
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">抵达那霸机场时间</span>
+                        <input class="form-control input-lg" type="date" name="qedt" value="{$res.qedt}">
                     </div>
                 </div>
 
@@ -117,28 +131,37 @@
 
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">中转地点</span>
+                        <span class="input-group-addon">转机出发城市</span>
                         <input class="form-control input-lg" type="text" value="{$res.qzhongplace}"  name="qzhongplace">
                     </div>
                 </div>
 
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">出发日期</span>
-                        <input class="form-control input-lg" type="date" name="qdt" value="{$res.qdt}">
+                        <span class="input-group-addon">转机航班号</span>
+                        <input class="form-control input-lg" type="text" value="{$res.qzhongnum}"  name="qzhongnum">
                     </div>
                 </div>
+
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">到达日期</span>
-                        <input class="form-control input-lg" type="date" name="qedt" value="{$res.qedt}">
+                        <span class="input-group-addon">转机起飞时间</span>
+                        <input class="form-control input-lg" type="datetime-local" value="{$res.qzhongdate}"  name="qzhongdate">
                     </div>
                 </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">转机冲绳抵达那霸机场时间</span>
+                        <input class="form-control input-lg" type="datetime-local" value="{$res.qzhongdaotime}"  name="qzhongdaotime">
+                    </div>
+                </div>
+
 
                 <h4 class="title">返程信息</h4>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">返程班号</span>
+                        <span class="input-group-addon">回程航班</span>
                         <input class="form-control input-lg" type="text"   value="{$res.fnumber}" name="fnumber" >
                     </div>
                 </div>
@@ -146,32 +169,32 @@
                 <div class="form-group col-lg-3">
 
                     <div class="input-group">
-                        <span class="input-group-addon">始发地&nbsp;&nbsp;&nbsp;</span>
+                        <span class="input-group-addon">出发城市</span>
                         <input class="form-control input-lg" type="text" name="fsplace" value="{$res.fsplace}" >
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">目的地&nbsp;&nbsp;&nbsp;</span>
+                        <span class="input-group-addon">抵达城市</span>
                         <input class="form-control input-lg" type="text" value="{$res.feplace}"  name="feplace">
                     </div>
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">出发日期</span>
-                        <input class="form-control input-lg" type="date" name="fdt" value="{$res.fdt}">
-                    </div>
-                </div>
-                <div class="form-group col-lg-3">
-                    <div class="input-group">
-                        <span class="input-group-addon">到达日期</span>
+                        <span class="input-group-addon">抵达时间</span>
                         <input class="form-control input-lg" type="date" name="fedt" value="{$res.fedt}">
                     </div>
                 </div>
+                <!--<div class="form-group col-lg-3">-->
+                    <!--<div class="input-group">-->
+                        <!--<span class="input-group-addon">到达日期</span>-->
+                        <!--<input class="form-control input-lg" type="date" name="fedt" value="{$res.fedt}">-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="form-group col-lg-3">
                     <div class="input-group">
                         <span class="input-group-addon">是否中转</span>
-                        <select class="form-control input-lg" name="fzhong">
+                        <select class="form-control input-lg hidebtn1" name="fzhong">
                             <option value="{$res.qzhong}">{$res.fzhong}</option>
                             <option value="是">是</option>
                             <option value="否">否</option>
@@ -181,15 +204,37 @@
                 </div>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">中转地点</span>
-                        <input class="form-control input-lg" type="text" value="{$res.fzhongplace}"  name="fzhongplace">
+                        <span class="input-group-addon">转机出发城市</span>
+                        <input class="form-control input-lg " type="text" value="{$res.fzhongplace}"  name="fzhongplace">
                     </div>
                 </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">转机航班号</span>
+                        <input class="form-control input-lg " type="text" value="{$res.fzhongnum}"  name="fzhongnum">
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">转机起飞时间</span>
+                        <input class="form-control input-lg " type="datetime-local" value="{$res.fzhongstime}"  name="fzhongstime">
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-3">
+                    <div class="input-group">
+                        <span class="input-group-addon">转机抵达目的地时间</span>
+                        <input class="form-control input-lg " type="datetime-local" value="{$res.fzhongetime}"  name="fzhongetime">
+                    </div>
+                </div>
+
 
                 <h4 class="title">T恤尺码</h4>
                 <div class="form-group col-lg-3">
                     <div class="input-group">
-                        <span class="input-group-addon">是否中转</span>
+                        <span class="input-group-addon">T恤尺码</span>
                         <select class="form-control input-lg" name="short">
                             <option value="{$res.short}">{$res.short}</option>
                             <option value="M">M-肩宽50 衣长69 胸围100， 参考身高170-175，适合体重65-75kg</option>
@@ -213,16 +258,38 @@
         <div class="footer" id="footerh">
             <div class="container">
                 <p align="center">
-广州市坤博会议服务有限公司
+                    &nbsp;&nbsp;&nbsp;&nbsp;
 </p>
                 
-    <div>技术支持<a href="#" style="margin-left:5px;color:#28a7e1;">
-       美迪康会务通</a></div>
-
+    <div></div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
             </div>
         </div>
-    
 
+        <script>
+            $(document).ready(function(){
+                $(".zhongbtn").hide();
+
+                $(".hidebtn").click(function(){
+                    $(".zhongbtn").hide();
+                });
+
+                $(".showbtn").click(function(){
+                    $(".zhongbtn").show();
+                });
+
+                $(".zhongbtn1").hide();
+
+                $(".hidebtn1").click(function(){
+                    $(".zhongbtn1").hide();
+                });
+
+                $(".showbtn1").click(function(){
+                    $(".zhongbtn1").show();
+                });
+
+            });
+        </script>
 
 
 

@@ -20,9 +20,9 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">一级密码</label>
+									<label for="focusedinput" class="col-sm-2 control-label">英文名</label>
 									<div class="col-sm-8">
-										<input type="text" name="pwd" value="{$res.pwd}" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="enname" value="{$res.enname}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -30,9 +30,88 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">二级密码</label>
+									<label for="focusedinput" class="col-sm-2 control-label">电话</label>
 									<div class="col-sm-8">
-										<input type="text" name="pwd2" value="{$res.pwd2}" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="tel" value="{$res.tel}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">密码</label>
+									<div class="col-sm-8">
+										<input type="text" name="password" value="{$res.password}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">邮箱</label>
+									<div class="col-sm-8">
+										<input type="text" name="email" value="{$res.email}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<h4 style="margin-left: 90px;color: red">去程信息</h4>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">出发航班号</label>
+									<div class="col-sm-8">
+										<input type="text" name="qnumber" value="{$res.qnumber}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">出发城市</label>
+									<div class="col-sm-8">
+										<input type="text" name="qsplace" value="{$res.qsplace}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">抵达城市</label>
+									<div class="col-sm-8">
+										<input type="text" name="qeplace" value="{$res.qeplace}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">出发日期</label>
+									<div class="col-sm-8">
+										<input type="text" name="qdt" value="{$res.qdt}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">抵达那霸机场时间</label>
+									<div class="col-sm-8">
+										<input type="text" name="qedt" value="{$res.qedt}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">是否中转</label>
+									<div class="col-sm-8">
+										<input type="text" name="qzhong" value="{$res.qzhong}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -41,9 +120,9 @@
 
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">商城积分</label>
+									<label for="focusedinput" class="col-sm-2 control-label">转机出发城市</label>
 									<div class="col-sm-8">
-										<input type="text" name="dongbag" value="{$res.dongbag}" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="qzhongplace" value="{$res.qzhongplace}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -51,9 +130,9 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">当前可用余额</label>
+									<label for="focusedinput" class="col-sm-2 control-label">转机航班号</label>
 									<div class="col-sm-8">
-										<input type="text" name="chargebag" value="{$res.chargebag}" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="qzhongnum" value="{$res.qzhongnum}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -61,9 +140,9 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">智能充余额</label>
+									<label for="focusedinput" class="col-sm-2 control-label">转机起飞时间</label>
 									<div class="col-sm-8">
-										<input type="text" name="jingbag" value="{$res.jingbag}" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="qzhongdate" value="{$res.qzhongdate}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -71,9 +150,21 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">二级密码</label>
+									<label for="focusedinput" class="col-sm-2 control-label">转机冲绳抵达那霸机场时间</label>
 									<div class="col-sm-8">
-										<input type="text" name="mima" value="" class="form-control1" id="focusedinput" placeholder="">
+										<input type="text" name="qzhongdaotime" value="{$res.qzhongdaotime}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+
+								<h4 style="margin-left: 90px;color: red">返程信息</h4>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">返程班号</label>
+									<div class="col-sm-8">
+										<input type="text" name="fnumber" value="{$res.fnumber}" class="form-control1" id="focusedinput" placeholder="">
 									</div>
 									<div class="col-sm-2">
 										<p class="help-block"></p>
@@ -81,15 +172,116 @@
 								</div>
 
 								<div class="form-group">
-									<label for="focusedinput" class="col-sm-2 control-label">是否禁用账号</label>
+									<label for="focusedinput" class="col-sm-2 control-label">出发城市 </label>
 									<div class="col-sm-8">
-										<select class="form-control1" name="isdelete">
-											<option value="{$res.isdelete}"><if condition="$res.isdelete eq 1"> 禁用<elseif condition="$res.isdelete eq 0"/>不禁用 </if> </option>
-											<option value="0">不禁用</option>
-											<option value="1">禁用</option>
-										</select>
+										<input type="text" name="fsplace" value="{$res.fsplace}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
 									</div>
 								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">出发时间   </label>
+									<div class="col-sm-8">
+										<input type="text" name="fdt" value="{$res.fdt}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">抵达城市</label>
+									<div class="col-sm-8">
+										<input type="text" name="feplace" value="{$res.feplace}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">抵达时间</label>
+									<div class="col-sm-8">
+										<input type="text" name="fedt" value="{$res.fedt}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">是否中转</label>
+									<div class="col-sm-8">
+										<input type="text" name="fzhong" value="{$res.fzhong}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">转机出发城市</label>
+									<div class="col-sm-8">
+										<input type="text" name="fzhongplace" value="{$res.fzhongplace}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">转机航班号</label>
+									<div class="col-sm-8">
+										<input type="text" name="fzhongnum" value="{$res.fzhongnum}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">转机起飞时间</label>
+									<div class="col-sm-8">
+										<input type="text" name="fzhongstime" value="{$res.fzhongstime}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">转机抵达目的地时间</label>
+									<div class="col-sm-8">
+										<input type="text" name="fzhongetime" value="{$res.fzhongetime}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">T恤尺码信息</label>
+									<div class="col-sm-8">
+										<input type="text" name="short" value="{$res.short}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+
+								<!--<div class="form-group">-->
+									<!--<label for="focusedinput" class="col-sm-2 control-label">是否禁用账号</label>-->
+									<!--<div class="col-sm-8">-->
+										<!--<select class="form-control1" name="isdelete">-->
+											<!--<option value="{$res.isdelete}"><if condition="$res.isdelete eq 1"> 禁用<elseif condition="$res.isdelete eq 0"/>不禁用 </if> </option>-->
+											<!--<option value="0">不禁用</option>-->
+											<!--<option value="1">禁用</option>-->
+										<!--</select>-->
+									<!--</div>-->
+								<!--</div>-->
 
 
 

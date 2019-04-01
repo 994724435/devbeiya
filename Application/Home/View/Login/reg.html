@@ -26,13 +26,18 @@
         content: attr(placeholder);
          color:#666666;
      }
+  input[type="datetime-local"]:before {
+      content: attr(placeholder);
+      color:#666666;
+  }
+
    h4{color: red}
 </style>
 </head>
 <body>
   <!--header 开始-->
   <header class="mui-bar mui-bar-nav" style="background-color: red">
-    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back" href="/index.php/Home/Login/login"></a>
+    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back" href="/index.php/Home/Index/index"></a>
     <h1 class="mui-title" style="color: white;font-weight: bold;font-size: 26px;">信息填写</h1>
   </header>
   <!--header 结束-->
@@ -66,21 +71,21 @@
 
            <h4>去程信息</h4>
             <div class="item item-username">
-                  <input class="txt-input txt-username" type="text" name="qnumber" placeholder="去程航班号"  id="tel">
+                  <input class="txt-input txt-username" type="text" name="qnumber" placeholder="出发航班号"  id="tel">
             </div>
 
           <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="qsplace" placeholder="始发地"  id="tel">
+            <input class="txt-input txt-username" type="text" name="qsplace" placeholder="出发城市"  id="tel">
           </div>
           <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="qeplace" placeholder="目的地"  id="tel">
+            <input class="txt-input txt-username" type="text" name="qeplace" placeholder="抵达城市"  id="tel">
           </div>
               <div class="item item-username">
-                  <input class="txt-input txt-username" type="date" name="qdt" value="出发日期" placeholder="出发日期"  id="tel">
+                  <input class="txt-input txt-username" type="datetime-local" name="qdt" value="起飞时间" placeholder="出发日期"  id="tel">
               </div>
 
               <div class="item item-username">
-                  <input class="txt-input txt-username" type="date" name="qedt" placeholder="到达日期"  id="tel">
+                  <input class="txt-input txt-username" type="datetime-local" name="qedt" placeholder="抵达那霸机场时间"  id="tel">
               </div>
           <!--<div class="item item-username">-->
             <!--<select class="form-control input-lg" name="qzhong">-->
@@ -94,27 +99,35 @@
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado hidebtn" name="qzhong" value="否" /> 否 </p>
               </div>
               <div class="item item-username">
-                  <input class="txt-input txt-username zhongbtn"  type="text" name="qzhongplace" placeholder="中转地点"  id="tel">
+                  <input class="txt-input txt-username zhongbtn"  type="text" name="qzhongplace" placeholder="转机出发城市"  id="tel">
               </div>
-
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn"  type="text" name="qzhongnum" placeholder="转机航班号"  id="tel">
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn"  type="datetime-local" name="qzhongdate" placeholder="转机起飞时间"  id="tel">
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn"  type="datetime-local" name="qzhongdaotime" placeholder="转机冲绳抵达那霸机场时间"  id="tel">
+              </div>
 
 
               <h4>返程信息</h4>
            <div class="item item-username">
-            <input class="txt-input txt-username" type="text" name="fnumber" placeholder="返程班号"  id="tel">
+            <input class="txt-input txt-username" type="text" name="fnumber" placeholder="回程航班"  id="tel">
           </div>
            <div class="item item-username">
-                  <input class="txt-input txt-username" type="text" name="fsplace" placeholder="始发地"  id="tel">
+                  <input class="txt-input txt-username" type="text" name="fsplace" placeholder="出发城市"  id="tel">
             </div>
             <div class="item item-username">
-                  <input class="txt-input txt-username" type="text" name="feplace" placeholder="目的地"  id="tel">
+                  <input class="txt-input txt-username" type="date" name="fdt" value="出发时间" placeholder="出发时间"  id="tel">
             </div>
-              <div class="item item-username">
-                  <input class="txt-input txt-username" type="date" name="fdt" value="出发日期" placeholder="出发日期"  id="tel">
-              </div>
+            <div class="item item-username">
+                  <input class="txt-input txt-username" type="text" name="feplace" placeholder="抵达城市"  id="tel">
+            </div>
 
               <div class="item item-username">
-                  <input class="txt-input txt-username" type="date" name="fedt" placeholder="到达日期"  id="tel">
+                  <input class="txt-input txt-username" type="date" name="fedt" placeholder="抵达时间"  id="tel">
               </div>
             <!--<div class="item item-username">-->
                   <!--<select class="form-control input-lg" name="fzhong">-->
@@ -128,7 +141,16 @@
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" class="rado hidebtn1" name="fzhong" value="否" /> 否 </p>
               </div>
               <div class="item item-username">
-                  <input class="txt-input txt-username zhongbtn1"  type="text" name="fzhongplace" placeholder="中转地点"  id="tel">
+                  <input class="txt-input txt-username zhongbtn1"  type="text" name="fzhongplace" placeholder="转机出发城市"  id="tel">
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn1"  type="text" name="fzhongnum" placeholder="转机航班号"  id="tel">
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn1"  type="datetime-local" name="fzhongstime" placeholder="转机起飞时间"  id="tel">
+              </div>
+              <div class="item item-username">
+                  <input class="txt-input txt-username zhongbtn1"  type="datetime-local" name="fzhongetime" placeholder="转机抵达目的地时间"  id="tel">
               </div>
 
               <HR align=center width=300 color=#987cb9 SIZE=1>

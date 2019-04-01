@@ -11,24 +11,24 @@
 				<div class="bs-example1" data-example-id="contextual-table">
 		<!--1收益 2充值 3静态提现  4动态提现  5 注册下级 6下单购买 7退本 8静态转账 9动态转账 10静态收益 11 动态收益-->
 					<form class="form-horizontal" action="" method="get" enctype="multipart/form-data">
-						<h3>资金变动列表</h3>
-						<div class="form-group">
-							用户账号 <input type="text" name="uid" style="width: 150px" value="" id="focusedinput" placeholder="">
-							日期 <input type="date" name="mindate" style="width: 150px" value="" id="focusedinput" placeholder="">
-							     <input type="date" name="maxdate" style="width: 150px" value="" id="focusedinput" placeholder="">
-							类型<select style="width: 150px" name="type">
-							<option value="0">全部</option>
-							<option value="1">积分</option>
-							<option value="2">金额</option>
-						</select>
+						<h3>留言列表</h3>
+						<!--<div class="form-group">-->
+							<!--用户账号 <input type="text" name="uid" style="width: 150px" value="" id="focusedinput" placeholder="">-->
+							<!--日期 <input type="date" name="mindate" style="width: 150px" value="" id="focusedinput" placeholder="">-->
+							     <!--<input type="date" name="maxdate" style="width: 150px" value="" id="focusedinput" placeholder="">-->
+							<!--类型<select style="width: 150px" name="type">-->
+							<!--<option value="0">全部</option>-->
+							<!--<option value="1">积分</option>-->
+							<!--<option value="2">金额</option>-->
+						<!--</select>-->
 
-						</div>
+						<!--</div>-->
 
-						<div class="col-sm-2">
-							<p class="help-block"></p>
-						</div>
+						<!--<div class="col-sm-2">-->
+							<!--<p class="help-block"></p>-->
+						<!--</div>-->
 
-						<p style="margin-left: 200px;margin-top: 20px;"></p><button class="btn-success btn">Submit</button>
+						<!--<p style="margin-left: 200px;margin-top: 20px;"></p><button class="btn-success btn">Submit</button>-->
 					</form>
 					<table class="table">
 						<thead>
@@ -37,14 +37,11 @@
 
 						</tr>
 						<tr>
-							<th>用户账号</th>
-							<th>说明</th>
-							<th>资金</th>
-							<th>状态</th>
-							
-							<th>类型</th>
+							<th>用户名</th>
+							<th>电话号码</th>
+							<th >内容</th>
 							<th>时间</th>
-							
+							<th>操作</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -60,15 +57,12 @@
 							echo "<tr class='info'>";
 							}
 							?>
-							<th scope="row">{$v.useraccount}</th>
-							<th>{$v.recordbody}</th>
-							<th>{$v.recordprice}</th>
-							<th><if condition="$v.recordstatus eq 1"> 收入<elseif condition="$v.recordstatus eq 0"/>支出</if></th>
-							
+							<th scope="row">{$v.name}</th>
+							<th>{$v.tel}</th>
+							<th style="width: 300px;max-height: 200px;">{$v.cont}</th>
 
-							<th><if condition="$v.recordtype eq 1"> 积分<elseif condition="$v.recordtype eq 0"/>金额</if></th>
-							<th>{$v.createdate}</th>
-
+							<th>{$v.addtime}</th>
+							<th><a href="__ROOT__/index.php/Admin/Menber/tixiandetail/id/{$v.id}">详 情</a></th>
 							
 						</tr>
 							<?php $i++ ;?>
