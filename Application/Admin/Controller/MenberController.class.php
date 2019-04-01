@@ -16,18 +16,14 @@ class MenberController extends CommonController {
 
     public function editeUser(){
 	    $uid =$_GET['id'];
-        $menber = M('p_menber');
+        $menber = M('p_users');
         if($_POST && $uid){
-            $mima =$_POST['mima'];
-            unset($_POST['mima']);
-            if($mima != "asd888"){
-                echo "<script>alert('请输入正确密码');window.location.href = '".__ROOT__."/index.php/Admin/Menber/select';</script>";exit();
-            }
+
             $data =$_POST;
             $menber->where(array('uid'=>$uid))->save($data);
             echo "<script>alert('修改成功');window.location.href = '".__ROOT__."/index.php/Admin/Menber/select';</script>";exit();
         }
-        $userinfo = $menber->where(array('uid'=>$uid))->select();
+        $userinfo = $menber->where(array('id'=>$uid))->select();
         $this->assign('res',$userinfo[0]);
         $this->display();
     }
@@ -137,24 +133,9 @@ class MenberController extends CommonController {
     }
 
     public function usermessage(){
-        $incomelog = M('p_incomelog');
+        $incomelog = M('p_cont');
 
-        if($_GET['uid']){
-            $userinfo = M('s_user')->where(array('userAccount'=>$_GET['uid']))->find();
-            $map['recordToUserId'] =$userinfo['id'] ;
-        }
-        if($_GET['type'] == 1 ){
-            $map['recordType'] = 1;
-        }
-        if($_GET['type'] == 2 ){
-            $map['recordType'] = 0;
-        }
-
-        if($_GET['mindate']&&$_GET['maxdate']){
-            $map['a.createDate'] =array(array('elt',$_GET['maxdate']),array('egt',$_GET['mindate']),'and');;
-        }
-
-        $users= $incomelog->alias('a')->join(' LEFT JOIN s_user b on a.recordToUserId=b.id')->order('a.id desc')->field('a.*,b.useraccount')->where($map)->select();
+        $users= $incomelog->select();
 
         $this->assign('users',$users);
         $this->display();
@@ -204,13 +185,9 @@ class MenberController extends CommonController {
     }
 
     public function tixiandetail(){
-        if($_POST){
-            M('p_incomelog')->where(array('id'=>$_GET['id']))->save(array('cont'=>$_POST['reson']));
-            echo "<script>window.location.href = '".__ROOT__."/index.php/Admin/Menber/istixian/id/".$_GET['id']."/state/".$_POST['state']."';</script>";exit();
-        }
-        $income =M('p_incomelog');
-        $data['p_incomelog.id'] = $_GET['id'];
-        $result =$income->field('p_incomelog.addtime as addtimes,p_incomelog.addymd as addymds,p_menber.name,p_menber.tel,p_menber.email,p_menber.realname,p_menber.zhifubao,p_menber.weixin,p_menber.bank,p_menber.bankname,p_menber.bankfrom,p_incomelog.userid,income,id,orderid,reson')->join('p_menber ON p_incomelog.userid=p_menber.uid')->where($data)->select();
+        $income =M('p_cont');
+        $data['id'] = $_GET['id'];
+        $result =$income->where($data)->select();
         $this->assign('res',$result[0]);
 
         $this->display();

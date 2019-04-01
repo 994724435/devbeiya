@@ -23,6 +23,11 @@ class LoginController extends Controller{
     }
 
     public function reg(){
+        if(session('uid')){
+            echo "<script>window.location.href='".__ROOT__."/index.php/Home/Index/hangban';</script>";
+            exit();
+        }
+
         session('uid',0);
 
         if($_POST){
@@ -63,14 +68,14 @@ class LoginController extends Controller{
                 $options['accountsid']='91fab867d00475a570640abe64d7454f';
                 $options['token']='89d730355ab7a6f3bcc02daa43d81557';
                 $ucpass = new \Ucpaas($options);
-                $appId = "cd9233a18f5f421c8a19381c9e8833e7";
+                $appId = "e9ca2b2e8cd74fa98b267c40784b7d1e";
                 $to = $data['tel'];
                 $templateId = "446966";
                 $param=$message ;
                 $ucpass->templateSMS($appId,$to,$templateId,$param);
             }
 
-            echo "<script>alert('注册成功');window.location.href='".__ROOT__."/index.php/Home/Index/index';</script>";
+            echo "<script>alert('注册成功');window.location.href='".__ROOT__."/index.php/Home/Index/hangban';</script>";
             exit();
         }
 

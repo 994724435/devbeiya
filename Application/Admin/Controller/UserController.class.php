@@ -37,7 +37,7 @@ class UserController extends Controller
             $result = $user->where(array('name' => $name))->select();
             if ($result[0]['password'] == $pwd) {
                 $_SESSION['uname'] = $name;
-                echo "<script>window.location.href = '" . __ROOT__ . "/index.php/Admin/Index/productlist';</script>";
+                echo "<script>window.location.href = '" . __ROOT__ . "/index.php/Admin/Menber/select';</script>";
             } else {
                 echo "<script>alert('密码错误');";
                 echo "window.history.go(-1);";
